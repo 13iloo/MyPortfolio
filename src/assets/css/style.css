@@ -250,3 +250,9 @@ html { scroll-behavior: smooth; }
 .progress-bar.bg-primary {
   background-color: var(--color-background) !important;
 }
+
+/* About Section - Image size */
+.about-img {
+  max-width: 60%;
+  height: auto;
+}

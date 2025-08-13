@@ -1,5 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, ProgressBar } from 'react-bootstrap';
+import img from '../assets/images/about.jpg';
+
 
 const skills = [
     { name: 'Observation', progress: 90 },
@@ -14,7 +16,7 @@ const About = () => {
             <Container>
                 <Row className="align-items-center">
                     <Col md={6} className="animate__animated animate__fadeInLeft">
-                        <img src="/images/about-placeholder.jpg" alt="About Us" className="img-fluid rounded shadow" />
+                        <img src={img} alt="About Us" className="img-fluid rounded shadow about-img" />
                     </Col>
                     <Col md={6} className="mt-4 mt-md-0 animate__animated animate__fadeInRight">
                         <h3>About Me</h3>

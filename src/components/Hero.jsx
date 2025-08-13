@@ -25,7 +25,7 @@ const Hero = () => {
                 <Row className="justify-content-center">
                     <Col md={10} lg={8}>
                         <h1 className="display-2 fw-bold mb-4 animate__animated animate__fadeInDown">
-                            IT ENGINEERING
+                            IT ENGINEER
                         </h1>
                         <p className="lead mb-5 animate__animated animate__fadeInUp">
                             An aspiring developer passionate about turning ideas into reality through code.

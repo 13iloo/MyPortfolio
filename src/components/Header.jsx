@@ -3,7 +3,7 @@ import { Navbar, Nav, Container, Offcanvas, NavDropdown } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import '../assets/css/header.css';
-import logoWebp from '../assets/images/BeelooW.png';
+import logo from '../assets/images/BeelooW.png';
 
 
 
@@ -47,9 +47,11 @@ const Header = () => {
     return (
         <div className='header'>
             <Navbar expand="lg" className={`py-3 px-0 ${isSticky ? 'navbar-sticky' : ''}`}>
+            <a href="#home" className="navbar-brand">
             <div className={`Lumi-tech-brand fw-bold fs-5 ${isSticky ? 'sticky-brand' : ''}`}>
-                <img src={logoWebp} alt="Lumi Tech Logo" className="Lumi-logo" />
+                <img src={logo} alt="Lumi Tech Logo" className="Lumi-logo" />
             </div>
+            </a>
             <Container className="px-0 ">
                 
                 <Navbar.Toggle aria-controls="offcanvasNavbar" onClick={handleShowOffcanvas}>
@@ -77,10 +79,6 @@ const Header = () => {
                             </NavDropdown>
                             <Nav.Link href="#portfolio" onClick={handleCloseOffcanvas} className={activeLink === 'portfolio' ? 'active' : ''}>Portfolio</Nav.Link>
                             <Nav.Link href="#about" onClick={handleCloseOffcanvas} className={activeLink === 'about' ? 'active' : ''}>About</Nav.Link>
-                            <Nav.Link href="#testimonials" onClick={handleCloseOffcanvas} className={activeLink === 'testimonials' ? 'active' : ''}>Testimonials</Nav.Link>
-                            <Nav.Link href="#team" onClick={handleCloseOffcanvas} className={activeLink === 'team' ? 'active' : ''}>Team</Nav.Link>
-                            <Nav.Link href="#pricing" onClick={handleCloseOffcanvas}>Pricing</Nav.Link>
-                            <Nav.Link href="#blog" onClick={handleCloseOffcanvas}>Blog</Nav.Link>
                             <Nav.Link href="#contact" onClick={handleCloseOffcanvas}>Contact</Nav.Link>
                         </Nav>
                     </Offcanvas.Body>
