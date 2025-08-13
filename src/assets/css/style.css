@@ -1,3 +1,18 @@
+:root {
+  --color-background: #1D3557; /* Dark Blue */
+  --color-surface: #457B9D;    /* Medium Blue */
+  --color-primary: #c7313d;    /* Red */
+  --color-secondary: #A8DADC;   /* Light Blue/Cyan */
+  --color-accent: #e9eee7;     /* Light Cream/Off-white */
+  --color-text-primary: #F1FAEE; /* Light Cream/Off-white */
+  --color-text-secondary: #A8DADC; /* Light Blue/Cyan */
+  --color-error: #EF5350;      /* Keeping existing red for error */
+
+  --color-background-rgb: 29, 53, 87;
+  --color-text-primary-rgb: 241, 250, 238;
+  --color-surface-rgb: 69, 123, 157;
+}
+
 html { scroll-behavior: smooth; }
 
 /* Services Section */
@@ -16,6 +31,20 @@ html { scroll-behavior: smooth; }
   background-repeat: no-repeat;
   color: aqua;
 }
+#portfolio{
+    background-color:var(--color-accent);
+
+}
+#services{
+    background-color:whitesmoke;
+}
+/* #header{
+    background-color:#E63946;
+} */
+
+
+
+
 
 .service-card:hover {
     transform: translateY(-10px);
@@ -23,7 +52,7 @@ html { scroll-behavior: smooth; }
 }
 
 .service-card .icon-box {
-    color: #007bff; /* Primary color for icons */
+    color: var(--color-secondary); /* Primary color for icons */
 }
 
 /* Portfolio Section */
@@ -51,7 +80,7 @@ html { scroll-behavior: smooth; }
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(var(--color-background-rgb), 0.7);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -84,7 +113,7 @@ html { scroll-behavior: smooth; }
 }
 
 .team-img-container img {
-    border: 5px solid #fff;
+    border: 5px solid var(--color-text-primary);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -94,7 +123,7 @@ html { scroll-behavior: smooth; }
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(var(--color-background-rgb), 0.7);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -108,13 +137,13 @@ html { scroll-behavior: smooth; }
 }
 
 .team-social-overlay .social-icon {
-    color: #fff;
+    color: var(--color-text-primary);
     font-size: 1.5rem;
     transition: color 0.3s ease-in-out;
 }
 
 .team-social-overlay .social-icon:hover {
-    color: #007bff; /* Primary color on hover */
+    color: var(--color-secondary); /* Primary color on hover */
 }
 
 /* Pricing Section */
@@ -139,13 +168,13 @@ html { scroll-behavior: smooth; }
 }
 
 .pricing-card.featured-plan .price-circle {
-    background-color: #007bff;
-    color: #fff;
-    border-color: #007bff;
+    background-color: var(--color-secondary);
+    color: var(--color-text-primary);
+    border-color: var(--color-secondary);
 }
 
 .pricing-card.featured-plan .price-circle span {
-    color: #fff !important;
+    color: var(--color-text-primary) !important;
 }
 
 .pricing-card ul {
@@ -154,4 +183,70 @@ html { scroll-behavior: smooth; }
 
 .pricing-card ul li {
     margin-bottom: 10px;
+}
+
+/* Bootstrap Overrides */
+.bg-dark {
+  background-color: var(--color-background) !important;
+}
+
+.border-secondary {
+  border-color: var(--color-secondary) !important;
+}
+
+.text-primary {
+  color: var(--color-primary) !important;
+}
+
+/* Bootstrap Overrides for Buttons */
+.btn-primary {
+  background-color: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary) !important; /* Keep same color on hover for now */
+  border-color: var(--color-primary) !important;
+  opacity: 0.8; /* Add a slight opacity change on hover */
+}
+
+.btn-outline-primary {
+  color: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary.active {
+  background-color: var(--color-primary) !important;
+  color: var(--color-background) !important; /* Text color on hover/active */
+  border-color: var(--color-primary) !important;
+}
+
+/* Bootstrap Overrides for Text Colors */
+.text-white {
+  color: var(--color-text-primary) !important;
+}
+
+.text-white-50 {
+  color: rgba(var(--color-text-primary-rgb), 0.5) !important;
+}
+
+/* Bootstrap Overrides for Text Colors */
+.text-muted {
+  color: var(--color-text-primary) !important;
+}
+
+/* Services Section - Specific text color */
+#services .text-muted {
+  color: var(--color-background) !important;
+}
+
+/* About Section - Specific text color */
+#about .text-muted {
+  color: var(--color-background) !important;
+}
+
+/* Bootstrap Overrides for Progress Bar */
+.progress-bar.bg-primary {
+  background-color: var(--color-background) !important;
 }

@@ -9,9 +9,9 @@ const Footer = () => {
             <Container>
                 <Row>
                     <Col md={4} className="mb-4 mb-md-0">
-                        <h5 className="text-uppercase mb-4">CraftoReplica</h5>
+                        <h5 className="text-uppercase mb-4">Bilal Osman</h5>
                         <p className="text-muted">
-                            We are a creative agency dedicated to crafting exceptional digital experiences.
+                            I am a creative developer dedicated to crafting exceptional digital experiences.
                         </p>
                         <div className="social-icons mt-3">
                             <a href="#!" className="text-white me-3"><FontAwesomeIcon icon={faFacebookF} size="lg" /></a>

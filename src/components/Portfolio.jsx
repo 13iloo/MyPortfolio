@@ -150,7 +150,7 @@ const Portfolio = () => {
     const filteredItems = filter === 'all' ? portfolioItems : portfolioItems.filter(item => item.category === filter);
 
     return (
-        <section id="portfolio" className="py-5 bg-light">
+        <section id="portfolio" className="py-5 ">
             <Container>
                 <h2 className="text-center mb-5 animate__animated animate__fadeInUp"> Portfolio</h2>
                 <div className="text-center mb-4 animate__animated animate__fadeInUp">
