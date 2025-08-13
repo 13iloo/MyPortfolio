@@ -1,0 +1,95 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Initial Navbar State (Transparent) */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1030;
+    background-color: transparent;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
+
+/* Sticky Navbar State (Solid Color) */
+.navbar-sticky {
+    
+    background-color: #370d0d; /* Example solid background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Example shadow */
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.8) !important; /* light white with some transparency */
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover{
+  color: #8b9ea5 !important; /* full white on hover and active */
+}
+
+
+/* Adjust body padding to prevent content jump when header becomes sticky */
+body {
+}
+
+/* .navbar-brand {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+}
+ */
+.Lumi-tech-brand {
+    top: 0;
+    left: 0;
+    /* padding: 15px 20px; Adjust padding as needed */
+    background-color: transparent; /* Initial transparent background */
+    color: #12c3d7; /* Text color */
+    z-index: 1031; /* Higher than Navbar's z-index (1030) */
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    font-weight: lighter;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.Lumi-tech-brand {
+  display: flex;
+  align-items: center;   /* Vertically center the logo and text */
+  gap: 0px;             /* Space between logo and text */
+}
+
+/* Optional: Adjust logo size */
+.Lumi-logo {
+    margin-left: 40px;
+    margin-right: 10px;
+    margin-top: 10px;
+  height: 90px;          /* Adjust as needed */
+  width: auto;
+}
+.Lumi-logotext{
+  height: 40px;          /* Adjust as needed */
+  width: 110px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.LUMi-tech-brand.sticky-brand {
+    background-color: #fff;
+    color: #eadede;
+}
+
+/* Ensure Nav links background is transparent */
+.navbar-expand-lg .navbar-nav {
+    background-color: transparent !important;
+    color: #eadede;
+
+}
+.offcanvas-body {
+    background-color: transparent !important;
+}
+
+.navbar-offcanvas {
+    background-color: transparent !important;
+}

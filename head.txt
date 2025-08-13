@@ -1,0 +1,43 @@
+{
+  "componentName": "HeaderNavbar",
+  "goal": "Recreate the header and navigation bar from https://crafto.themezaa.com/ using React, CSS, and Bootstrap, preserving all layout, animations, and responsive behaviors.",
+  "stack": {
+    "framework": "React",
+    "styling": ["CSS", "Bootstrap 5"],
+    "animations": ["GSAP or CSS transitions"]
+  },
+  "features": [
+    "Full-width sticky top navbar",
+    "Transparent background at top, changes to solid color on scroll",
+    "Site logo on the left (use placeholder image/logo)",
+    "Primary navigation links centered or right-aligned depending on screen size",
+    "Dropdown menu for multi-level items (Bootstrap dropdown behavior)",
+    "Smooth scroll to section anchors",
+    "Hamburger menu toggle for mobile view",
+    "Animated menu open/close transitions",
+    "Active link highlighting"
+  ],
+  "designRequirements": {
+    "spacing": "Match Crafto's generous padding between menu items",
+    "typography": "Use a Google Font similar to Crafto's header text",
+    "colorScheme": "Use same transparent-to-colored transition scheme as reference",
+    "hoverEffects": "Underline or color change on hover with smooth transition"
+  },
+  "responsiveBehavior": {
+    "mobile": "Collapsible menu under hamburger icon",
+    "tablet": "Menu slightly condensed but still horizontal",
+    "desktop": "Full horizontal menu with dropdowns"
+  },
+  "performanceAndAccessibility": {
+    "ariaLabels": true,
+    "keyboardNavigation": true,
+    "lightweightAnimations": true
+  },
+  "acceptanceCriteria": [
+    "Header visually matches Crafto's navbar layout and interaction",
+    "Transparent to solid background change works smoothly",
+    "Navigation is fully responsive and functional",
+    "Dropdowns open on hover (desktop) and on tap/click (mobile)",
+    "No copyrighted assets"
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "projectName": "CraftoReplica",
+  "goal": "Create a fully responsive, feature-complete replica of https://crafto.themezaa.com/ using React, CSS, and Bootstrap. Maintain identical layout, animations, typography styles, section ordering, and interaction patterns, replacing copyrighted images/text with placeholders.",
+  "stack": {
+    "framework": "React",
+    "styling": ["CSS", "Bootstrap 5"],
+    "animations": ["GSAP", "Framer Motion (optional)"],
+    "carousel": ["Swiper.js"],
+    "icons": ["Font Awesome"]
+  },
+  "sections": [
+    {
+      "name": "Header / Navigation",
+      "features": [
+        "Sticky top navigation with transparent-to-colored background on scroll",
+        "Smooth scroll to sections",
+        "Dropdown menus",
+        "Responsive hamburger menu for mobile"
+      ]
+    },
+    {
+      "name": "Hero Section",
+      "features": [
+        "Full-width background with layered animations",
+        "Primary call-to-action button",
+        "Optional placeholder video background"
+      ]
+    },
+    {
+      "name": "Services / Features",
+      "features": [
+        "Icon + title + description cards",
+        "Hover animations",
+        "Staggered entrance animations"
+      ]
+    },
+    {
+      "name": "Portfolio / Showcase",
+      "features": [
+        "Masonry grid layout",
+        "Category filter tabs",
+        "Hover reveal animations"
+      ]
+    },
+    {
+      "name": "About Section",
+      "features": [
+        "Two-column layout (image + text)",
+        "Progress bars or counters",
+        "Scroll-triggered animations"
+      ]
+    },
+    {
+      "name": "Testimonials",
+      "features": [
+        "Carousel slider",
+        "Star ratings",
+        "Client name, photo, and role"
+      ]
+    },
+    {
+      "name": "Team Section",
+      "features": [
+        "Team member cards",
+        "Hover social media links"
+      ]
+    },
+    {
+      "name": "Pricing Section",
+      "features": [
+        "Three-column pricing tables",
+        "Highlighted featured plan"
+      ]
+    },
+    {
+      "name": "Blog Section",
+      "features": [
+        "Grid layout of posts",
+        "Image, title, short excerpt",
+        "Read more links"
+      ]
+    },
+    {
+      "name": "Call-To-Action",
+      "features": [
+        "Bold headline",
+        "Large button",
+        "Parallax background"
+      ]
+    },
+    {
+      "name": "Footer",
+      "features": [
+        "Multi-column links",
+        "Newsletter form",
+        "Social media icons",
+        "Copyright"
+      ]
+    }
+  ],
+  "styleRequirements": {
+    "typography": "Match the reference site’s typography scale using similar Google Fonts",
+    "colorPalette": "Same as reference site",
+    "spacing": "Generous whitespace",
+    "responsiveness": "Mobile-first design across all breakpoints"
+  },
+  "animationRequirements": [
+    "Fade-ins on scroll",
+    "Image hover zoom & overlay",
+    "Sticky header transition",
+    "Smooth anchor scrolling",
+    "Carousel auto-play with swipe support"
+  ],
+  "performanceAndSEO": {
+    "imageOptimization": "Use WebP format where possible",
+    "lighthouseTarget": "Performance score >90",
+    "metaTags": true,
+    "mobileFirst": true
+  },
+  "deployment": {
+    "platforms": ["Netlify", "Vercel"],
+    "include": ["sitemap.xml", "robots.txt"],
+    "buildInstructions": "Provide README.md with setup, run, and deploy steps"
+  },
+  "acceptanceCriteria": [
+    "Layout and behavior indistinguishable from the reference site",
+    "No copyrighted images or exact text",
+    "Fully functional navigation, sliders, filters, and animations",
+    "Cross-browser compatibility: Chrome, Firefox, Safari, mobile browsers"
+  ]
+}
