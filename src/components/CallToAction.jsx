@@ -22,7 +22,7 @@ const CallToAction = () => {
                         <p className="lead mb-5 animate__animated animate__fadeInUp" style={{ color: '#ffffff' }}>
                             From robust backend systems to immersive frontend experiences, I engineer solutions that drive results. Let's discuss your next project.
                         </p>
-                        <Button variant="outline-light" size="lg" className="animate__animated animate__zoomIn" href="bilalhassen239@gmail.com" style={{
+                        <Button variant="outline-light" size="lg" className="animate__animated animate__zoomIn" href="mailto:bilalhassen239@gmail.com" style={{
                             borderColor: 'var(--color-primary)',
                             color: 'var(--color-primary)',
                             borderWidth: '2px',
