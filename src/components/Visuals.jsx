@@ -38,7 +38,7 @@ const Visuals = () => {
                                     ></iframe>
                                 </div>
                                 <div className="video-info p-3">
-                                    <h5 className="text-white mb-2">{video.title}</h5>
+                                    <h6 className="text-white mb-2">{video.title}</h6>
                                     <p className="text-white-50 mb-0">{video.description}</p>
                                 </div>
                             </div>
