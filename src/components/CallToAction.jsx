@@ -4,37 +4,31 @@ import { Container, Row, Col, Button } from 'react-bootstrap';
 const CallToAction = () => {
     return (
         <section id="cta" className="call-to-action-section text-white text-center py-5" style={{
-            backgroundImage: 'url(/images/cta-background.jpg)', // Placeholder image
-            backgroundSize: 'cover',
-            backgroundAttachment: 'fixed', // Parallax effect
-            backgroundPosition: 'center',
+            background: 'linear-gradient(135deg, var(--color-surface) 0%, var(--color-background) 100%)',
             minHeight: '400px',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             position: 'relative',
-            zIndex: 1
+            zIndex: 1,
+            borderTop: '1px solid var(--color-primary)'
         }}>
-            <div style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                width: '100%',
-                height: '100%',
-                backgroundColor: 'rgba(0, 0, 0, 0.6)', // Overlay for text readability
-                zIndex: -1
-            }}></div>
             <Container>
                 <Row className="justify-content-center">
                     <Col md={10} lg={8}>
-                        <h2 className="display-4 fw-bold mb-4 animate__animated animate__fadeInDown">
-                            Let's Build Something Amazing Together!
+                        <h2 className="display-4 fw-bold mb-4 animate__animated animate__fadeInDown" style={{ color: 'var(--color-text-primary)' }}>
+                            Ready to Elevate Your Digital Infrastructure?
                         </h2>
-                        <p className="lead mb-5 animate__animated animate__fadeInUp">
-                            I'm committed to delivering high-quality solutions while continuously growing as a developer. Contact me to discuss your ideas.
+                        <p className="lead mb-5 animate__animated animate__fadeInUp" style={{ color: '#ffffff' }}>
+                            From robust backend systems to immersive frontend experiences, I engineer solutions that drive results. Let's discuss your next project.
                         </p>
-                        <Button variant="light" size="lg" className="animate__animated animate__zoomIn">
-                            Contact Me
+                        <Button variant="outline-light" size="lg" className="animate__animated animate__zoomIn" href="mailto:bilal.m.o.h.d@hotmail.com" style={{
+                            borderColor: 'var(--color-primary)',
+                            color: 'var(--color-primary)',
+                            borderWidth: '2px',
+                            borderRadius: '0'
+                        }}>
+                            Get in Touch
                         </Button>
                     </Col>
                 </Row>

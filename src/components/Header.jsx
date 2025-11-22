@@ -3,7 +3,7 @@ import { Navbar, Nav, Container, Offcanvas, NavDropdown } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import '../assets/css/header.css';
-import logo from '../assets/images/BeelooW.png';
+import logo from '../assets/images/beeloo.png';
 
 
 
@@ -71,13 +71,8 @@ const Header = () => {
                         <Nav className="mx-auto">
                             <Nav.Link href="#home" onClick={handleCloseOffcanvas} className={activeLink === 'home' ? 'active' : ''}>Home</Nav.Link>
                             <Nav.Link href="#services" onClick={handleCloseOffcanvas} className={activeLink === 'services' ? 'active' : ''}>Services</Nav.Link>
-                            <NavDropdown title="Pages" id="basic-nav-dropdown">
-                                <NavDropdown.Item href="#action/3.1">Page 1</NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.2">Page 2</NavDropdown.Item>
-                                <NavDropdown.Divider />
-                                <NavDropdown.Item href="#action/3.3">Something else</NavDropdown.Item>
-                            </NavDropdown>
                             <Nav.Link href="#portfolio" onClick={handleCloseOffcanvas} className={activeLink === 'portfolio' ? 'active' : ''}>Portfolio</Nav.Link>
+                            <Nav.Link href="#visuals" onClick={handleCloseOffcanvas} className={activeLink === 'visuals' ? 'active' : ''}>Visuals</Nav.Link>
                             <Nav.Link href="#about" onClick={handleCloseOffcanvas} className={activeLink === 'about' ? 'active' : ''}>About</Nav.Link>
                             <Nav.Link href="#contact" onClick={handleCloseOffcanvas}>Contact</Nav.Link>
                         </Nav>

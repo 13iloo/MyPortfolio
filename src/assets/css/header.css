@@ -19,8 +19,8 @@ html, body {
 /* Sticky Navbar State (Solid Color) */
 .navbar-sticky {
     
-    background-color: var(--color-primary); /* Example solid background color */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Example shadow */
+    background-color: var(--color-background); /* Dark blue background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .nav-link {
@@ -29,13 +29,13 @@ html, body {
 }
 
 .nav-link:hover{
-  color: var(--color-text-secondary) !important; /* full white on hover and active */
+  color: var(--color-secondary) !important; /* full white on hover and active */
 }
 
 
 /* Adjust body padding to prevent content jump when header becomes sticky */
-body {
-}
+/* body {
+} */
 
 /* .navbar-brand {
     padding-left: 0 !important;
@@ -51,7 +51,7 @@ body {
     z-index: 1031; /* Higher than Navbar's z-index (1030) */
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
     font-weight: lighter;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: var(--font-primary);
 }
 .Lumi-tech-brand {
   display: flex;
@@ -75,9 +75,11 @@ body {
   display: flex;
 }
 
-.LUMi-tech-brand.sticky-brand {
-    background-color: var(--color-surface);
+.Lumi-tech-brand.sticky-brand {
+    background-color: transparent; /* Seamless integration */
     color: var(--color-text-primary);
+    padding: 0; /* Remove potential padding causing corners */
+    border-radius: 0; /* Remove corners */
 }
 
 /* Ensure Nav links background is transparent */

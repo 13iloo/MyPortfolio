@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLaptopCode, faMobileAlt, faChartLine, faCloud, faServer, faWifi, faCube, faGamepad, faDatabase, faRobot, faChartBar } from '@fortawesome/free-solid-svg-icons';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const servicesData = [
     {
@@ -67,16 +71,43 @@ const servicesData = [
 ];
 
 const Services = () => {
+    const cardsRef = useRef([]);
+
+    useEffect(() => {
+        cardsRef.current.forEach((card, index) => {
+            gsap.fromTo(card, 
+                { opacity: 0, y: 50, rotationX: 15 }, 
+                { 
+                    opacity: 1, 
+                    y: 0, 
+                    rotationX: 0,
+                    duration: 0.8, 
+                    ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: card,
+                        start: 'top 85%',
+                        toggleActions: 'play none none reverse'
+                    },
+                    delay: index % 4 * 0.1 // Stagger effect based on column position
+                }
+            );
+        });
+    }, []);
+
     return (
         <section id="services" className="py-5">
             <Container>
-                <h2 className="text-center mb-5 animate__animated animate__fadeInUp">Hard Skills</h2>
+                <h2 className="text-center mb-5 services-title">Hard Skills</h2>
                 <Row className="g-4">
                     {servicesData.map((service, index) => (
-                        <Col md={6} lg={3} key={index} className="animate__animated animate__fadeInUp" style={{ animationDelay: `${index * 0.1}s` }}>
-                            <div className="service-card text-center p-4 border rounded shadow-sm h-100">
+                        <Col md={6} lg={3} key={index}>
+                            <div 
+                                ref={el => cardsRef.current[index] = el}
+                                className="service-card text-center p-4 border rounded shadow-sm h-100"
+                                style={{ perspective: '1000px' }}
+                            >
                                 <div className="icon-box mb-3">
-                                    <FontAwesomeIcon icon={service.icon} size="3x" className="text-primary" />
+                                    <FontAwesomeIcon icon={service.icon} size="2x" className="text-primary" />
                                 </div>
                                 <h3 className="h5 mb-3">{service.title}</h3>
                                 <p className="text-muted">{service.description}</p>

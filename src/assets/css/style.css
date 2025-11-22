@@ -1,16 +1,98 @@
 :root {
-  --color-background: #1D3557; /* Dark Blue */
-  --color-surface: #457B9D;    /* Medium Blue */
-  --color-primary: #c7313d;    /* Red */
-  --color-secondary: #A8DADC;   /* Light Blue/Cyan */
-  --color-accent: #e9eee7;     /* Light Cream/Off-white */
-  --color-text-primary: #F1FAEE; /* Light Cream/Off-white */
-  --color-text-secondary: #A8DADC; /* Light Blue/Cyan */
-  --color-error: #EF5350;      /* Keeping existing red for error */
+  --color-background: #003135; /* Deep Teal */
+  --color-background2: #fcd069; /* Deep Teal */
+  --color-surface: #024950;    /* Dark Teal */
+  --color-primary: #0FA4AF;    /* Bright Teal */
+  --color-secondary: #FFD700;   /* Yellow (from logo) */
+  --color-accent: #AFDDE5;     /* Light Blue */
+  --color-text-primary: #AFDDE5; /* Light Blue */
+  --color-text-secondary: #ffffff; /* White */
+  --color-text-dark: #003135;   /* Dark text for light backgrounds */
+  --color-error: #EF5350;
 
-  --color-background-rgb: 29, 53, 87;
-  --color-text-primary-rgb: 241, 250, 238;
-  --color-surface-rgb: 69, 123, 157;
+  --color-background-rgb: 0, 49, 53;
+  --color-text-primary-rgb: 175, 221, 229;
+  --color-surface-rgb: 2, 73, 80;
+  
+  --font-primary: 'Inter', sans-serif;
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.5);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.5);
+  --shadow-lg: 0 10px 15px rgba(0,0,0,0.5);
+}
+
+html { 
+    scroll-behavior: smooth; 
+    cursor: none; /* Hide default cursor */
+}
+
+/* Custom Cursor */
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--color-primary);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    transition: width 0.2s, height 0.2s, background-color 0.2s;
+}
+
+.custom-cursor.hovered {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(230, 57, 70, 0.1); /* Primary color with opacity */
+    border-color: transparent;
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--color-text-primary);
+    background-color: var(--color-background);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Slightly darker overlay */
+    z-index: -1;
+}
+
+.hero-title {
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    text-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.hero-subtitle {
+    font-size: 1.35rem;
+    font-weight: 300;
+    opacity: 0.95;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 html { scroll-behavior: smooth; }
@@ -18,87 +100,155 @@ html { scroll-behavior: smooth; }
 /* Services Section */
 .service-card {
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background-color: rgba(2, 73, 80, 0.9); /* Dark Teal with opacity */
+    backdrop-filter: blur(5px); /* Subtle blur */
+    border: 1px solid var(--color-primary); /* Bright Teal Border */
+    border-radius: 0; /* Sharp corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    min-height: 320px; /* Increased height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-#service {
-  background-image: 
-    linear-gradient(
-      135deg,
-      rgba(0, 255, 255, 0.3),
-      rgba(0, 128, 255, 0.3)
-    );
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: aqua;
+
+#services, #portfolio {
+    background-color: transparent !important; /* Let 3D background show */
 }
-#portfolio{
-    background-color:var(--color-accent);
-
-}
-#services{
-    background-color:whitesmoke;
-}
-/* #header{
-    background-color:#E63946;
-} */
-
-
-
-
 
 .service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px var(--color-primary); /* Glow on hover */
+    background-color: rgba(2, 73, 80, 0.95);
+    border-color: var(--color-secondary); /* Switch to Rust on hover */
 }
 
 .service-card .icon-box {
-    color: var(--color-secondary); /* Primary color for icons */
-}
-
-/* Portfolio Section */
-.portfolio-item {
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-}
-
-.portfolio-img-container {
-    position: relative;
-    overflow: hidden;
-}
-
-.portfolio-img-container img {
-    width: 100%;
-    height: auto;
-    display: block;
+    color: var(--color-primary); /* Bright Teal Icon */
+    margin-bottom: 1.5rem;
     transition: transform 0.3s ease-in-out;
 }
 
-.portfolio-overlay {
+.service-card h3 {
+    color: #ffffff; /* White for better contrast */
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.service-card p {
+    color: rgba(255, 255, 255, 0.5); /* Darker/dimmer white for description */
+    font-size: 0.95rem;
+}
+
+/* Portfolio Section */
+.portfolio-link {
+    display: block;
+    height: 100%;
+}
+
+.portfolio-item {
+    position: relative;
+    cursor: pointer;
+    background: linear-gradient(145deg, rgba(15, 164, 175, 0.15) 0%, rgba(2, 73, 80, 0.3) 100%);
+    backdrop-filter: blur(10px);
+    border: 2px solid var(--color-primary);
+    border-radius: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6), inset 0 0 30px rgba(15, 164, 175, 0.2);
+    height: 100%;
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.portfolio-link:hover .portfolio-item {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.7), 0 0 25px var(--color-secondary);
+    background: linear-gradient(145deg, rgba(15, 164, 175, 0.25) 0%, rgba(2, 73, 80, 0.4) 100%);
+    border-color: var(--color-secondary);
+    border-width: 3px;
+}
+
+.portfolio-content {
+    text-align: center;
+    width: 100%;
+}
+
+.portfolio-content .card-title {
+    color: var(--color-secondary) !important;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.portfolio-content .card-text {
+    color: #ffffff !important;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.repo-badge .badge {
+    background: var(--color-primary);
+    color: var(--color-background);
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 0;
+    transition: all 0.3s ease;
+}
+
+.portfolio-link:hover .repo-badge .badge {
+    background: var(--color-secondary);
+    transform: translateX(5px);
+}
+
+/* Visuals Section */
+.video-card {
+    background: linear-gradient(145deg, rgba(15, 164, 175, 0.15) 0%, rgba(2, 73, 80, 0.3) 100%);
+    backdrop-filter: blur(10px);
+    border: 2px solid var(--color-primary);
+    border-radius: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6), inset 0 0 30px rgba(15, 164, 175, 0.2);
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.video-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.7), 0 0 25px var(--color-secondary);
+    border-color: var(--color-secondary);
+    border-width: 3px;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    background: #000;
+}
+
+.video-container iframe {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(var(--color-background-rgb), 0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
 }
 
-.portfolio-item:hover .portfolio-overlay {
-    opacity: 1;
+.video-info {
+    background: rgba(0, 0, 0, 0.5);
 }
 
-.portfolio-item:hover .portfolio-img-container img {
-    transform: scale(1.1);
-}
-
-.portfolio-info {
-    text-align: center;
-    padding: 20px;
+.video-info h5 {
+    color: var(--color-secondary);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 /* Team Section */
@@ -238,7 +388,7 @@ html { scroll-behavior: smooth; }
 
 /* Services Section - Specific text color */
 #services .text-muted {
-  color: var(--color-background) !important;
+  color: var(--color-background2) !important;
 }
 
 /* About Section - Specific text color */
