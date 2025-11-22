@@ -5,15 +5,15 @@ const Visuals = () => {
     const videos = [
         {
             id: 1,
-            title: 'InSite Demo - Short',
+            title: 'Trutn or Dare - Short',
             url: 'https://www.youtube.com/embed/Xy5ngQG9u98',
-            description: 'Quick demonstration of InSite features'
+            description: 'Truth  or Dare game developed using typescript and react,capacitor and nodejs. App is released on playstore'
         },
         {
             id: 2,
-            title: 'InSite Full Demo',
+            title: 'Borderless Game Jam Slice',
             url: 'https://www.youtube.com/embed/a4vg71irkdg',
-            description: 'Complete walkthrough of InSite application'
+            description: 'Complete walkthrough of UIs made for the game jam project. Made on Unreal Engine'
         }
     ];
 

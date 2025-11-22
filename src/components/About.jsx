@@ -8,9 +8,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 const skills = [
     { name: 'Observation', progress: 90 },
-    { name: 'Decision Making', progress: 90 },
-    { name: 'Communication', progress: 90 },
-    { name: 'Multi-tasking', progress: 90 }
+    { name: 'Multi-tasking', progress: 75 },
+    { name: 'Communication', progress: 80 },
+    { name: 'Decision Making', progress: 85 },
 ];
 
 const About = () => {
