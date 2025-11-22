@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Navbar, Nav, Container, Offcanvas, NavDropdown } from 'react-bootstrap';
+import { Navbar, Nav, Container, Offcanvas } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import '../assets/css/header.css';
@@ -65,7 +65,7 @@ const Header = () => {
                     onHide={handleCloseOffcanvas}
                 >
                     <Offcanvas.Header closeButton>
-                        <Offcanvas.Title id="offcanvasNavbarLabel">CraftoReplica</Offcanvas.Title>
+                        <Offcanvas.Title id="offcanvasNavbarLabel">BilooPortfolio</Offcanvas.Title>
                     </Offcanvas.Header>
                     <Offcanvas.Body>
                         <Nav className="mx-auto">

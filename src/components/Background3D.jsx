@@ -1,6 +1,6 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { Icosahedron, MeshDistortMaterial, Float, Environment } from '@react-three/drei';
+import { Icosahedron, MeshDistortMaterial, Float } from '@react-three/drei';
 import * as THREE from 'three';
 
 const GeometricShape = () => {

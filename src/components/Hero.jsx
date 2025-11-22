@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { gsap } from 'gsap';
-import heroPlaceholder from '../assets/images/hero.jpg';
 
 const Hero = () => {
     const titleRef = useRef(null);

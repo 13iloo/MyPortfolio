@@ -19,6 +19,10 @@ const About = () => {
     const skillsRef = useRef([]);
 
     useEffect(() => {
+        // Capture ref.current values for cleanup
+        const imgElement = imgRef.current;
+        const textElement = textRef.current;
+        
         // Use IntersectionObserver for reliable triggering regardless of scroll distance
         const observerOptions = {
             threshold: 0.1, // Trigger when 10% of element is visible
@@ -60,8 +64,8 @@ const About = () => {
             });
         }, observerOptions);
 
-        if (imgRef.current) imageObserver.observe(imgRef.current);
-        if (textRef.current) textObserver.observe(textRef.current);
+        if (imgElement) imageObserver.observe(imgElement);
+        if (textElement) textObserver.observe(textElement);
 
         // Skills Animation with IntersectionObserver
         skillsRef.current.forEach((skill, index) => {
@@ -88,8 +92,9 @@ const About = () => {
         });
 
         return () => {
-            if (imgRef.current) imageObserver.unobserve(imgRef.current);
-            if (textRef.current) textObserver.unobserve(textRef.current);
+            // Use captured values in cleanup
+            if (imgElement) imageObserver.unobserve(imgElement);
+            if (textElement) textObserver.unobserve(textElement);
         };
     }, []);
 
